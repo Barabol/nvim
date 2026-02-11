@@ -14,7 +14,11 @@ keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
 keymap.set("n", "<leader>b", vim.cmd.NvimTreeFocus)
 
 keymap.set("n", "<leader>c", vim.cmd.ColorizerToggle)
-keymap.set("n", "<leader><leader>", vim.cmd.Telescope)
+
+-- telescope
+keymap.set("n", "<leader><leader>", function()
+	vim.cmd("Telescope find_files")
+end, { desc = "Telescope find files" })
 
 keymap.set("t", "<C-c>", "clear<CR>")
 keymap.set("n", "<leader>u", vim.cmd.undo)
