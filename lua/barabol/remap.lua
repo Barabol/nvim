@@ -20,5 +20,17 @@ keymap.set("n", "<leader><leader>", function()
 	vim.cmd("Telescope find_files")
 end, { desc = "Telescope find files" })
 
+keymap.set("n", "<leader>c", function()
+	local str = vim.fn.input("Find> ")
+	if str == "" then
+		return
+	end
+	vim.cmd("Telescope grep_string use_regex=true search=" .. str)
+end, { desc = "Telescope find files" })
+
+keymap.set("n", "<leader>opm", function()
+	vim.cmd("source ./opm.vim")
+end, { desc = "will be removed" })
+
 keymap.set("t", "<C-c>", "clear<CR>")
 keymap.set("n", "<leader>u", vim.cmd.undo)
