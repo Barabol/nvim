@@ -13,7 +13,27 @@ vim.opt.tabstop = TabLen
 
 print("barabollos")
 
-
 vim.cmd("tnoremap <Esc> <C-\\><C-n>")
 
 vim.cmd("colorscheme gruvbox")
+
+require("nvim-web-devicons").setup({
+	override_by_extension = {
+		["sl"] = {
+			icon = "󰫄",
+			color = "#4b9ff2",
+			name = "SkipiLang",
+		},
+		["slcmp"] = {
+			icon = "󰫈",
+			color = "#2a60f5",
+			name = "SkipiLangCompiled",
+		},
+	},
+})
+vim.filetype.add({
+	extension = {
+		sl = "skipiLang",
+		slcmp = "skipiLangCompiled",
+	},
+})

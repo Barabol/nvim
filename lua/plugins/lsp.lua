@@ -394,6 +394,10 @@ return {
 		config = function()
 			local filetypes = {
 				"bash",
+				"python",
+				"cpp",
+				"java",
+				"kotlin",
 				"c",
 				"diff",
 				"html",

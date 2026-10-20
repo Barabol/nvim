@@ -13,7 +13,7 @@ keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "closes terminal" })
 keymap.set("n", "<leader>n", vim.cmd.NvimTreeToggle)
 keymap.set("n", "<leader>b", vim.cmd.NvimTreeFocus)
 
-keymap.set("n", "<leader>c", vim.cmd.ColorizerToggle)
+keymap.set("n", "<leader>x", vim.cmd.ColorizerToggle)
 
 -- telescope
 keymap.set("n", "<leader><leader>", function()
